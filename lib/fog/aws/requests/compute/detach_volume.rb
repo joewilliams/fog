@@ -31,11 +31,6 @@ module Fog
             :parser     => Fog::Parsers::AWS::Compute::DetachVolume.new
           }.merge!(options))
         end
-        
-        def force_detach_volume(volume_id, options = {})
-          options.store('Force', true)
-          detach_volume(volume_id, options)
-        end
 
       end
 
